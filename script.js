@@ -28,7 +28,7 @@ new Typewriter (txtAnim,{
 
 //----------observeur -----------------
 
-const para = document.querySelector('p')
+/* const para = document.querySelector('p')
 
 
 const observer = new IntersectionObserver (arrive,{rootMarging : "-50px"})
@@ -48,7 +48,7 @@ function arrive(entries)
     //console.log("je suis plus la ");
     entry.target.className =""
   }
-}
+} */
 
 const img = document.querySelectorAll('img')
 const obsImg = new IntersectionObserver (arriveImg, {})
