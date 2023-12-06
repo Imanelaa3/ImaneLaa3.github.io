@@ -43,18 +43,6 @@
   animation: paraAnim 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
-@keyframes langAnim {
-  0% {
-    transform: translateZ(0) translateY(0);
-    box-shadow: 0 0 0 0 transparent;
-  }
-  100% {
-    transform: translateZ(50px) translateY(-12px);
-  }
-}
-
-/*   .animLang{
-  animation: langAnim 1s linear 0s infinite alternate-reverse both;} */
 
 /*------CSS Basique ---------------*/
 canvas {
@@ -143,35 +131,17 @@ p {
   box-shadow: 3px 3px 5px black;
 }
 
-.mesProjets {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-@media screen and (min-width: 900px) {
-  .mesProjets {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-  .theme {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-}
 
 @media screen and (max-width: 500px) {
-  .mesProjets {
-    display: none;
-  }
+  
   .animLang {
     width: 70px;
     height: 70px;
   }
   .animPara {
     font-size: 1rem;
+    animation: none;
   }
   li {
     font-size: 10px;
@@ -179,28 +149,15 @@ p {
     border: 1px;
   }
   .contact a {
-    font-size: 0.3em;
+    font-size: 0.6em;
   }
 
   .credit {
-    font-size: 0.2;
+    font-size: 0.6em;
   }
-  projet-balise {
-    display: none;
-  }
+
+  
 }
-
-/* .projet1, .projet2, .projet3 {
-    background-color: antiquewhite;
-    width: 100px;
-    height: 100px;
-    border-radius: 10%;
-    margin: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
-} */
 
 .mesprojets {
   color: antiquewhite;
@@ -402,7 +359,7 @@ li {
   border-radius: 65px;
   color: #000000;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1em;
   line-height: 1.5em;
   font-family: "Louis";
   position: relative;
@@ -462,4 +419,26 @@ li:nth-child(even) time:before {
   left: calc(100% + 5px);
   background: repeating-linear-gradient(90deg, antiquewhite 0 5px, #0000 0 10px)
     50%/100% 2px no-repeat;
+}
+
+/* --------------- Timeline responsive-------------------------------- */
+
+@media screen and (max-width:500px) {
+
+  li{
+    font-size: 0.6em;
+    width: 250px;
+    padding: 5px;
+    border : 3px ;
+    margin-left:100px;
+    margin-right: 100px;
+  }
+
+  ul{
+    grid: none;
+  }
+  time::before{
+    width: 10px;
+  }
+  
 }
