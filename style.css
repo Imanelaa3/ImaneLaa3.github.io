@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* -----------------------Font--------------------------- */
+@font-face {
+  font-family: "Louis";
+  src: url(./ressources/font/louis_george_cafe/Louis\ George\ Cafe.ttf);
+}
+@font-face {
+  font-family: "Design";
+  src: url(./ressources/font/michland/Michland\ Script.otf);
+}
+@font-face {
+  font-family: "h1";
+  src: url(./ressources/font/vice_city_sans/ViceCitySans-Light.otf);
+}
+@font-face {
+  font-family: "Revolution";
+  src: url(./ressources/font/revolution_saji/REVOLUTION.ttf);
+}
+@font-face {
+  font-family: "h2";
+  src: url(./ressources/font/mollen/Mollen\ Personal\ Use-BoldNarrow.otf);
+}
+
+/*------------- Animation -------------*/
+@keyframes paraAnim {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animPara {
+  animation: paraAnim 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+@keyframes langAnim {
+  0% {
+    transform: translateZ(0) translateY(0);
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    transform: translateZ(50px) translateY(-12px);
+  }
+}
+
+/*   .animLang{
+  animation: langAnim 1s linear 0s infinite alternate-reverse both;} */
+
+/*------CSS Basique ---------------*/
+canvas {
+  z-index: 1;
+  position: absolute;
+  opacity: 40%;
+}
+
+strong {
+  font-family: "Louis";
+}
+
+element {
+  --bg-color: #1b1a1a;
+  --main-color: #faebd7;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  z-index: -1;
+}
+
+body {
+  background-color: var(--bg-color);
+  background-color: #1b1a1a;
+  padding: 10px;
+}
+
+h1,
+p {
+  color: #faebd7;
+
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+}
+
+.design {
+  font-family: "design";
+}
+
+h1 {
+  font-family: "h1";
+  font-size: 3rem;
+  margin-top: 40vh;
+  margin-bottom: 50vh;
+}
+
+.theme {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  z-index: 2;
+  position: relative;
+}
+.t1,
+.t2,
+.t3 {
+  color: #faebd7;
+  font-family: "Louis";
+}
+
+.t1:hover,
+.t2:hover,
+.t3:hover {
+  cursor: pointer;
+  transform: translate(-1px, 5px);
+}
+
+.animPara {
+  position: relative;
+}
+
+p {
+  border: 2px solid;
+  border-radius: 28px;
+  margin-top: 100px;
+  padding: 10px;
+  font-family: "Louis";
+  font-size: 2rem;
+  padding: 3em;
+  width: 100%;
+  box-shadow: 3px 3px 5px black;
+}
+
+.mesProjets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 900px) {
+  .mesProjets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .theme {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .mesProjets {
+    display: none;
+  }
+  .animLang {
+    width: 70px;
+    height: 70px;
+  }
+  .animPara {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 10px;
+    line-height: 0;
+    border: 1px;
+  }
+  .contact a {
+    font-size: 0.3em;
+  }
+
+  .credit {
+    font-size: 0.2;
+  }
+  projet-balise {
+    display: none;
+  }
+}
+
+/* .projet1, .projet2, .projet3 {
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+} */
+
+.mesprojets {
+  color: antiquewhite;
+  margin-top: 20vh;
+}
+
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+.ag-courses_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  padding: 50px 0;
+}
+.ag-courses_item {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+
+  margin: 0 15px 30px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+  display: flex;
+}
+.ag-courses-item_link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #1b1a1a;
+  border: 1px solid #fff;
+
+  overflow: hidden;
+
+  position: relative;
+}
+.ag-courses-item_link:hover,
+.ag-courses-item_link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #fff;
+}
+.ag-courses-item_link:hover .ag-courses-item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.ag-courses-item_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 30px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
+.ag-courses-item_date {
+  font-weight: bold;
+  color: #f5f0e9;
+
+  -webkit-transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+}
+.ag-courses-item_bg {
+  height: 128px;
+  width: 128px;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+  background-color: rgb(228, 176, 220);
+}
+
+@media only screen and (max-width: 979px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .ag-courses-item_title {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+}
+@media only screen and (max-width: 639px) {
+  .ag-courses_item {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+  .ag-courses-item_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 24px;
+  }
+  .ag-courses-item_link {
+    padding: 22px 40px;
+  }
+  .ag-courses-item_date-box {
+    font-size: 16px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-family: "Louis";
+}
+
+.mesCompetences {
+  background-color: antiquewhite;
+  border-radius: 28px;
+  width: 100%;
+  margin-top: 20vh;
+}
+h2 {
+  text-align: center;
+  padding: 1rem;
+  font-family: "h2";
+  font-size: 2rem;
+  text-decoration: underline;
+}
+.languages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  row-gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+img {
+  width: 130px;
+  height: 130px;
+}
+.historique h2 {
+  color: #faebd7;
+}
+
+.historique {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+h5 {
+  font-family: "Louis";
+}
+
+.contact {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.contact a {
+  font-family: "Revolution";
+}
+
+.credit {
+  font-family: "Louis";
+}
+
+/*-----------------Time line-----------------*/
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  justify-content: center;
+}
+li {
+  grid-column: span 2;
+  text-align: center;
+  border-radius: 65px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 1.5em;
+  font-family: "Louis";
+  position: relative;
+  padding: 20px;
+  margin: 50px;
+  border: 10px solid #0000;
+  background: linear-gradient(antiquewhite 0 0) content-box,
+    linear-gradient(var(--c, #1b1a1a) 0 0) padding-box,
+    linear-gradient(var(--d, 90deg), #0000 75%, antiquewhite 0) border-box;
+}
+li:nth-child(even) {
+  grid-column-end: -1;
+  --d: -90deg;
+  --c: #1b1a1a;
+}
+li:not(:last-child) {
+  margin-bottom: -20px;
+}
+li:before,
+li:after {
+  content: "";
+  display: block;
+  height: 0.6em;
+}
+
+time {
+  position: absolute;
+  font-size: 0.65em;
+  left: calc(100% + 50px);
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  color: white;
+}
+li:nth-child(even) time {
+  left: auto;
+  color: #f8f6f6;
+  right: calc(100% + 50px);
+}
+
+time:before {
+  content: "";
+  position: absolute;
+  height: 10px;
+  top: calc(50% - 5px);
+  right: calc(100% + 5px);
+  width: 65px;
+  background: repeating-linear-gradient(
+      -90deg,
+      antiquewhite 0 5px,
+      #0000 0 10px
+    )
+    50%/100% 2px no-repeat;
+}
+li:nth-child(even) time:before {
+  right: auto;
+  left: calc(100% + 5px);
+  background: repeating-linear-gradient(90deg, antiquewhite 0 5px, #0000 0 10px)
+    50%/100% 2px no-repeat;
+}
