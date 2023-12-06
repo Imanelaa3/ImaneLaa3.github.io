@@ -412,7 +412,7 @@ time:before {
       antiquewhite 0 5px,
       #0000 0 10px
     )
-    50%/100% 2px no-repeat;
+    50%/10% 2px no-repeat;
 }
 li:nth-child(even) time:before {
   right: auto;
@@ -426,7 +426,7 @@ li:nth-child(even) time:before {
 @media screen and (max-width:500px) {
 
   li{
-    font-size: 0.6em;
+    font-size: 0.9em;
     width: 250px;
     padding: 5px;
     border : 3px ;
@@ -436,9 +436,17 @@ li:nth-child(even) time:before {
 
   ul{
     grid: none;
+    
   }
   time::before{
     width: 10px;
+  }
+  time{
+    left: 104%;
+    
+  }
+  li:nth-child(even) time {
+    right: 104%;
   }
   
 }
