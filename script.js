@@ -50,7 +50,7 @@ function arrive(entries)
   }
 } */
 
-const img = document.querySelectorAll('img')
+/* const img = document.querySelectorAll('img')
 const obsImg = new IntersectionObserver (arriveImg, {})
 
 img.forEach(i=>obsImg.observe(i))
@@ -72,7 +72,7 @@ function show (entry)
     console.log('on les vois plus ');
     entry.target.className = ""
   }
-}
+} */
 
 //---------Choix du theme----------
 

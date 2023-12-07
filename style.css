@@ -158,6 +158,10 @@ p {
   .credit {
     font-size: 0.6em;
   }
+  .languages img{
+    width: 50px;
+    height: 50px;
+  }
 
   
 }
@@ -296,7 +300,6 @@ a {
 
 .mesCompetences {
   background-color: antiquewhite;
-  border-radius: 28px;
   width: 100%;
   margin-top: 20vh;
 }
@@ -319,6 +322,7 @@ img {
   width: 130px;
   height: 130px;
 }
+
 .historique h2 {
   color: #faebd7;
 }
