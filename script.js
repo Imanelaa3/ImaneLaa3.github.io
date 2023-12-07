@@ -102,6 +102,8 @@ const times = document.querySelectorAll("time");
 const lis = document.querySelectorAll("li");
 const contact = document.querySelector(".contact");
 const projet = document.querySelectorAll(".ag-courses-item_link");
+const cardCouleur = document.querySelectorAll('.ag-courses_item:nth-child(2n)')
+const cardCouleur1 = document.querySelectorAll(' .ag-courses-item_bg')
 
 const t1 = document.querySelector(".t1");
 const t2 = document.querySelector(".t2");
@@ -133,6 +135,8 @@ t1.addEventListener("click", () => {
   times.forEach((time) => (time.style.color = couleurT12));
   lis.forEach((li) => (li.style.background = couleurT13));
   projet.forEach((pr) => (pr.style.background = couleurT12));
+  cardCouleur.forEach((cc) => (cc.style.color = couleurT13));
+  cardCouleur1.forEach((cc1) => (cc1.style.color = couleurT13));
   contact.style.background = couleurT12;
 });
 t2.addEventListener("click", () => {
@@ -145,6 +149,8 @@ t2.addEventListener("click", () => {
   times.forEach((time) => (time.style.color = couleurT24));
   lis.forEach((li) => (li.style.background = couleurT24));
   projet.forEach((pr) => (pr.style.background = couleurT24));
+  cardCouleur.forEach((cc) => (cc.style.color = couleurT23));
+  cardCouleur1.forEach((cc1) => (cc1.style.color = couleurT23));
   contact.style.background = couleurT24;
 });
 t3.addEventListener("click", () => {
@@ -156,5 +162,8 @@ t3.addEventListener("click", () => {
   monHistoire.style.color = couleurT33;
   times.forEach((time) => (time.style.color = couleurT34));
   lis.forEach((li) => (li.style.background = couleurT34));
+  projet.forEach((pr) => (pr.style.background = couleurT31));
+  cardCouleur.forEach((cc) => (cc.style.color = couleurT32));
+  cardCouleur1.forEach((cc1) => (cc1.style.color = couleurT32));
   contact.style.background = couleurT32;
 });
