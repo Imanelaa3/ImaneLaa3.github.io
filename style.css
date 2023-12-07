@@ -401,7 +401,8 @@ li:after {
 
 time {
   position: absolute;
-  font-size: 0.65em;
+  font-size: 0.95em;
+  text-decoration: underline;
   left: calc(100% + 50px);
   top: 50%;
   transform: translateY(-50%);
@@ -420,7 +421,6 @@ time:before {
   height: 10px;
   top: calc(50% - 5px);
   right: calc(100% + 5px);
-  width: 65px;
   background: repeating-linear-gradient(
       -90deg,
       antiquewhite 0 5px,
