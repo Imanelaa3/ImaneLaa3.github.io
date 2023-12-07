@@ -446,14 +446,17 @@ li:nth-child(even) time:before {
     
   }
   time::before{
-    width: 10px;
+    width: 20px;
+    
   }
+
   time{
-    left: 104%;
+    left: 100%;
+    color: red;
     
   }
   li:nth-child(even) time {
-    right: 104%;
-  }
+    right: 100%;
+    color: red;  }
   
 }
