@@ -437,12 +437,11 @@ li:nth-child(even) time:before {
     width: 250px;
     padding: 5px;
     border : 3px ;
-    margin-left:100px;
-    margin-right: 100px;
+   
   }
 
   ul{
-    grid: none;
+    display: block;
     
   }
   time::before{
@@ -452,11 +451,11 @@ li:nth-child(even) time:before {
 
   time{
     left: 100%;
-    color: red;
+    color: white;
     
   }
   li:nth-child(even) time {
     right: 100%;
-    color: red;  }
+    color: white;  }
   
 }
