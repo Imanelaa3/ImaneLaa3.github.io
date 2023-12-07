@@ -43,7 +43,6 @@
   animation: paraAnim 1.2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 
-
 /*------CSS Basique ---------------*/
 canvas {
   z-index: 1;
@@ -129,12 +128,10 @@ p {
   padding: 3em;
   width: 100%;
   box-shadow: 3px 3px 5px black;
+  margin-bottom: 100px;
 }
 
-
-
 @media screen and (max-width: 500px) {
-  
   .animLang {
     width: 70px;
     height: 70px;
@@ -143,7 +140,7 @@ p {
     font-size: 1rem;
     animation: none;
   }
-  p{
+  p {
     font-size: 1em;
   }
   li {
@@ -152,23 +149,22 @@ p {
     border: 1px;
   }
   .contact a {
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
 
   .credit {
     font-size: 0.6em;
   }
-  .languages img{
+  .languages img {
     width: 50px;
     height: 50px;
   }
-
-  
 }
 
 .mesprojets {
   color: antiquewhite;
-  margin-top: 20vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 .ag-format-container {
@@ -301,7 +297,8 @@ a {
 .mesCompetences {
   background-color: antiquewhite;
   width: 100%;
-  margin-top: 20vh;
+  margin-top: 100px;
+  margin-bottom: 100px;
 }
 h2 {
   text-align: center;
@@ -341,6 +338,7 @@ h5 {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  align-items: center;
 }
 
 .contact a {
@@ -349,6 +347,14 @@ h5 {
 
 .credit {
   font-family: "Louis";
+}
+
+.ligne{
+  height: 5px;
+  width: 100%;
+  background-color: antiquewhite;
+  border-radius: 100px;
+  z-index: 99;
 }
 
 /*-----------------Time line-----------------*/
@@ -430,32 +436,27 @@ li:nth-child(even) time:before {
 
 /* --------------- Timeline responsive-------------------------------- */
 
-@media screen and (max-width:500px) {
-
-  li{
+@media screen and (max-width: 500px) {
+  li {
     font-size: 0.9em;
     width: 250px;
     padding: 5px;
-    border : 3px ;
-   
+    border: 3px;
   }
 
-  ul{
+  ul {
     display: block;
-    
   }
-  time::before{
+  time::before {
     width: 20px;
-    
   }
 
-  time{
+  time {
     left: 100%;
     color: white;
-    
   }
   li:nth-child(even) time {
     right: 100%;
-    color: white;  }
-  
+    color: white;
+  }
 }
