@@ -194,6 +194,7 @@ p {
 
   border-radius: 28px;
   display: flex;
+  justify-content: space-evenly;
 }
 .ag-courses-item_link {
   display: block;
